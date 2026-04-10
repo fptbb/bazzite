@@ -31,7 +31,7 @@ jobs:
       fail-fast: false
       matrix:
         image_name:
-          - bazzite
+          # - bazzite
           # - bazzite-nvidia
           - bazzite-nvidia-open
           # - bazzite-gnome
@@ -133,7 +133,7 @@ jobs:
             --security-opt label=disable \
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
             --build-arg INSTALL_IMAGE_PAYLOAD="$INSTALL_IMAGE_PAYLOAD" \
-            --build-arg FLATPAK_DIR_SHORTNAME="$FLATPAK_DIR_SHORTNAME" \
+            --build-?arg FLATPAK_DIR_SHORTNAME="$FLATPAK_DIR_SHORTNAME" \
             -t localhost/payload:latest installer/
 
       - name: Build ISOs
