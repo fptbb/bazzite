@@ -203,7 +203,7 @@ jobs:
           overwrite: true
 
       - name: Upload ISOs and Checksum to R2
-        if: github.event_name == 'workflow_dispatch' && github.ref_name == 'main'
+        if: github.event_name == 'workflow_dispatch' && github.ref_name == 'testing'
         shell: bash
         env:
           RCLONE_CONFIG_R2_TYPE: s3
